@@ -1,4 +1,6 @@
 //https://app.codility.com/programmers/trainings/4/first_unique/
+//Task Score 54%
+//Correctness 100%
 
 using System;
 using System.Linq;
