@@ -8,12 +8,6 @@ using System.Collections.Generic;
 
 class Solution {
     public int solution(int[] A) {
-        List<int> deduped = new List<int>();
-        foreach(int i in A)
-        {
-            if(!deduped.Contains(i))
-                deduped.Add(i);
-        }
-        return deduped.Count;
+        return new HashSet<int>(A).Count;
     }
 }
