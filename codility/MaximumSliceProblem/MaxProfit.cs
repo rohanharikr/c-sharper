@@ -1,23 +1,18 @@
 //https://app.codility.com/programmers/lessons/9-maximum_slice_problem/max_profit/
-//Task Score 66%
-//Correctness 100%
-//Performance 25%
 
 using System;
 
 class Solution {
     public int solution(int[] A) {
-        int max = 0;
-        for(int i = 0; i < A.Length; i++)
+        int buy = Int32.MaxValue;
+        int profit = 0;
+        foreach(int i in A)
         {
-            int dayStart = A[i];
-            for(int j = i + 1; j < A.Length; j++)
-            {
-                int dayEnd  = A[j]; 
-                int profitLoss = dayEnd - dayStart;
-                max = Math.Max(profitLoss, max);
-            }
+            if(i < buy)
+                buy = i;
+            else
+                profit = Math.Max(profit, i - buy);
         }
-        return max;
+        return profit;
     }
 }
