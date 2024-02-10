@@ -6,11 +6,11 @@ public class Solution {
         for(int i = 0; i < nums.Length; i++)
         {
             int diff = target - nums[i];
-            int index = Array.IndexOf(nums, diff);
-            if(index == -1 || index == i)
+            int diffIndex = Array.IndexOf(nums, diff);
+            if(diffIndex == -1 || diffIndex == i)
                 continue;
             
-            res = [ i, index ];
+            res = [ i, diffIndex ];
             break;
         }
 
